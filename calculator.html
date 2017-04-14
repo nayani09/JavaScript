@@ -2,88 +2,85 @@
 <html>
 <head>
     <style>
-        table{
-            height: 300px;
-            width: 300px;
-            background-color: #8aafea;
-        }
-        button{
-            width: 75px;
-            height: 60px;
-            font-size: 20pt;
-            background-color: #c5d8f7;
-        }
-        #display{
-            height: 60px;
-            width: 300px;
-            font-size: 28pt;
-        }
-        button:hover{
-            background-color: darkorange;
-        }
-        #c, #eq{
-            width: 150px;
-        }
+    #id1{
+        padding-top: 100px;
+    }
+    #op{
+        margin-left: 350px;
+        margin-top: -100px;
+    }
+    li{
+        margin-top:10px;
+    }
+    #id2{
+        margin-left:450px;
+        margin-top: -105px;
+    }
+    button{
+        height: 30px;
+        width: 30px;
+    }
     </style>
 </head>
-<body align="center">
-    
-<table align="center">
-    <tr>
-        <td colspan="4"><input id="display" style="text-align:right"/></td>
-    </tr>
-    
-        
-    <tr>
-        <td><button id="b2" value=1 onclick="input(b2.value)">1</button></td>
-        <td><button id="b3" value=2 onclick="input(b3.value)">2</button></td>
-        <td><button id="b4" value=3 onclick="input(b4.value)">3</button></td>
-        <td><button id="b1" value=+ onclick="input(b1.value)">+</button></td>
-        
-    </tr>
-    <tr>
-        <td><button id="b6" value=4 onclick="input(b6.value)">4</button></td>
-        <td><button id="b7" value=5 onclick="input(b7.value)">5</button></td>
-        <td><button id="b8" value=6 onclick="input(b8.value)">6</button></td>
-        <td><button id="b5" value=- onclick="input(b5.value)">-</button></td>
-    </tr>
-    <tr>
-        <td><button id="b10" value=7 onclick="input(b10.value)">7</button></td>
-        <td><button id="b11" value=8 onclick="input(b11.value)">8</button></td>
-        <td><button id="b12" value=9 onclick="input(b12.value)">9</button></td>
-        <td><button id="b9" value=* onclick="input(b9.value)">*</button></td>
-    </tr>
-    <tr>
-        <td><button id="b14" value=. onclick="input(b14.value)">.</button></td>
-        <td><button id="b15" value=0 onclick="input(b15.value)">0</button></td>
-        <td><button id="b16" value=% onclick="input(b16.value)">%</button></td>
-        <td><button id="b13" value=/ onclick="input(b13.value)">/</button></td>
-    </tr>
-    <tr>
-        <td colspan="2"><button id="c" value=C onclick="c() ">C</button></td>
-        <td  colspan="2"><button id="eq" value== onclick="display.value=eval(display.value)">=</button></td>
-        
-    </tr>
-</table>
-
+<body>
+<div id="id1"><input placeholder="Num 1" id="num1" />  +   <input placeholder="Num 2" id="num2" /></div>
+<div id="op">
+<ul type="none"><li><button onclick="add()">+</button></li>
+<li> <button onclick="sub()">-</button></li> 
+<li><button onclick="mul()"><sub>*</sub></button></li>
+<li> <button onclick="div()">/</button></li></ul>
+</div> <div id="id2"><input placeholder="Result" id="output"/></div>
 <script>
-    function input(n){
-        var n1;
-        if(typeof(n)=="number")
-        {
-          display.value+=n;  
-        }
-       /* else if(n!=n1)
-        {
-            display.value+=n;
-        }
-        else{
 
-        }*/
+
+function add(){
+    var num1= document.getElementById("num1").value;
+    var num2= document.getElementById("num2").value;
+    if((!isNaN(num1))&& (!isNaN(num2))&&(num1!="") && (num2!=""))
+    {
+        document.getElementById("output").value= +num1 + +num2;
     }
-    function c(){
-        document.getElementById("display").value="";
+    else{
+        alert("enter valid input");
     }
-    </script>
+    }
+   
+
+function sub(){
+    var num1= document.getElementById("num1").value;
+    var num2= document.getElementById("num2").value;
+    if((!isNaN(num1))&& (!isNaN(num2))&&(num1!="") && (num2!=""))
+    {
+        document.getElementById("output").value= num1 - num2;
+    }
+    else{
+        alert("enter valid input");
+    }
+}
+
+function mul(){
+    var num1= document.getElementById("num1").value;
+    var num2= document.getElementById("num2").value;
+    if((!isNaN(num1))&& (!isNaN(num2))&&(num1!="") && (num2!=""))
+    {
+        document.getElementById("output").value= num1 * num2;
+    }
+    else{
+        alert("enter valid input");
+    }
+}
+
+function div(){
+    var num1= document.getElementById("num1").value;
+    var num2= document.getElementById("num2").value;
+    if((!isNaN(num1))&& (!isNaN(num2))&&(num1!="") && (num2!=""))
+    {
+        document.getElementById("output").value= num1 / num2;
+    }
+    else{
+        alert("enter valid input");
+    }
+}
+</script>
 </body>
 </html>
