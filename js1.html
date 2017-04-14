@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+   
+    #e1:hover{
+        background-color: #0000cc;
+    
+    }
+    #e2:hover{
+        background-color: #009900;
+    
+    }
+    #e3:hover{
+        background-color: #339999;
+    
+    }
+    #e4:hover{
+        background-color: #cc0033;
+    
+    }
+    </style>
+</head>
+<body align="center">
+    <h3> Exercise 1</h3>
+    <a onclick="b1()"><img src="1.gif" height= 50px width= 50px/> </a>
+    <a onclick="b2()"><img src="2.gif" height= 50px width= 50px/> </a>
+    <a onclick="b3()"><img src="3.gif" height= 50px width= 50px/> </a>
+    <script>
+        function b1(){
+            alert("You clicked on 1");
+        }
+         function b2(){
+            alert("You clicked on 2");
+        }
+         function b3(){
+            alert("You clicked on 3");
+        }
+         function o1(){
+            alert("You moused over 1");
+        }
+         function o2(){
+            alert("You moused over 2");
+        }
+         function o3(){
+            alert("You moused over 3");
+        }
+        function n3(){
+            var num= document.getElementById("num").value;
+            num=num*3;
+            alert(num);
+        }
+        function add(){
+            var num1= document.getElementById("num1").value;
+            var num2= document.getElementById("num2").value;
+            alert(num1+"+"+num2"+"="+ +num1 + +num2);
+        }
+        function sub(){
+            var num1= document.getElementById("num1").value;
+            var num2= document.getElementById("num2").value;
+             alert(num1 - num2);
+        }
+        function mul(){
+            var num1= document.getElementById("num1").value;
+            var num2= document.getElementById("num2").value;;
+             alert(num1 * num2);
+        }
+        function div(){
+            var num1= document.getElementById("num1").value;
+            var num2= document.getElementById("num2").value;
+            alert(num1/num2);
+        }
+    </script>
+    <h3> Excercise 2</h3>
+    <a onmouseover="o1()"><img src="1.gif" height= 50px width= 50px/> </a>
+    <a onmouseOver="o2()"><img src="2.gif" height= 50px width= 50px/> </a>
+    <a onmouseOver="o3()"><img src="3.gif" height= 50px width= 50px/> </a>
+    <h3> Excercise 3</h3>
+    Enter number to be multiplied by 3: <input type="text" value="n" id="num"/>
+    <button onClick="n3()">Find it</button>
+    <h3 > Excercise 4</h3>
+    num1: <input type="text" value="n" id="num1"/> num2: <input type="text" value="n" id="num2"/>
+    <button onClick="add()">add</button><button onClick="sub()">subtract</button><button onClick="mul()">multiply</button><button onClick="div()">divide</button>
+    <h3> Excercise 5</h3>
+    <button id="e1">Find it</button>
+    <button id="e2">Find it</button>
+    <button id="e3">Find it</button>
+    <button id="e4">Find it</button>
+</body>
+</html>
