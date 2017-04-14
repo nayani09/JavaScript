@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mydate</title>
+
+
+    <style>
+        .one{
+        width:700px;
+        height:300px;
+        background:#b6f442;
+        margin-left:200px;
+        text-align:center;
+
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<div class="one" >
+    <h1><U>NACRE SOFTWARE SERVICES</U></h1>
+   <h3>Please Enter A Date<input type="number" id="a1" placeholder="mm" max="12" min="1" size="1px;"/>
+       <input type="number" max="31" min="1" id="a2" placeholder="dd" size="1px;"/>
+       <input type="number" id="a3" placeholder="year" maxlength="4" size="4px;"/></h3>
+    <button onclick="abc()">click To Validate</button>
+    <p id="demo"></p>
+
+
+</div>
+
+
+<script>
+ function abc()
+ {
+    var b=document.getElementById("a1").value;
+    var c=document.getElementById("a2").value;
+    var d=document.getElementById("a3").value;
+
+   if(b==(1||3||5||7||8||10||12) && c<=31)
+    {
+        document.getElementById("demo").innerHTML="valid date entered";
+    }
+    else if( b==2 && d%4==0 && c<=29)
+    {
+    document.getElementById("demo").innerHTML="valid date entered";
+
+    }
+    else if (b==2 && d%4!==0 && c<=28)
+    {
+    document.getElementById("demo").innerHTML="valid date entered";
+
+    }
+
+    else if(b==(4||6||9||11) && c<=30 )
+    {
+     document.getElementById("demo").innerHTML="valid date entered";
+    }
+
+     else
+    {
+    document.getElementById("demo").innerHTML="Invalid date entered";
+    }
+
+ }
+
+</script>
+</body>
+
+
+</html>
